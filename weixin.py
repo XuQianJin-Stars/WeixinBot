@@ -810,6 +810,7 @@ class UnicodeStreamFilter:
 		self.encoding = 'utf-8'
 		self.errors = 'replace'
 		self.encode_to = self.target.encoding
+		self.closed = self.target.closed
 
 	def write(self, s):
 		if type(s) == str:
