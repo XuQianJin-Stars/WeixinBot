@@ -823,7 +823,9 @@ class UnicodeStreamFilter:
 
 if sys.stdout.encoding == 'cp936':
 	sys.stdout = UnicodeStreamFilter(sys.stdout)
-
+	
+if sys.stderr.encoding == 'cp936':
+	sys.stderr = UnicodeStreamFilter(sys.stderr)
 
 if __name__ == '__main__':
 
